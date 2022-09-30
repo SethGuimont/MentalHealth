@@ -10,10 +10,9 @@ class BasicForm(Form):
     submit = SubmitField("Submit")
 
 
-@app.route('/', methods=['POST', 'GET'])
+@app.route('/')
 def main():
-    form = BasicForm()
-    return render_template("index.html", form=form)
+    return render_template("index.html")
 
 '''
 Code will go here that routes a person to a specific bucket
@@ -24,12 +23,12 @@ They will be different forms attached to different buckets
 @app.route('/minnesota', methods=['POST', 'GET'])
 def minnesota():
     min_form = BasicForm()
-    return render_template('minnesota.html')
+    return render_template('minnesota.html', min_form=min_form)
 
 @app.route('/wisconsin', methods=['POST', 'GET'])
 def wisconsin():
     wis_form = BasicForm()
-    return render_template('wisconsin.html')
+    return render_template('wisconsin.html', wis_form=wis_form)
 
 
 if __name__ == '__main__':
