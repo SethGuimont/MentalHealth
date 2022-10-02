@@ -1,5 +1,5 @@
 '''
-look here for advice
+look here for advice on unit testing
 https://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure
 '''
 import os

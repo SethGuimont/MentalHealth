@@ -2,17 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>FormFinder Minnesota</title>
 </head>
 <body>
 <header>
-    <nav></nav>
+      <nav>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Community</li>
+        </ul>
+    </nav>
 </header>
     <form action="/search" method="POST">
         {{min_form.csrf_token}}
         {{min_form.ids}}
         {{min_form.submit}}
     </form>
+
+<footer></footer>
 </body>
 </html>

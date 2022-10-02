@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <title>FormFinder Wisconsin</title>
 </head>
 <body>
 <header>
-    <nav></nav>
+      <nav>
+        <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Community</li>
+        </ul>
+    </nav>
 </header>
     <form action="/search" method="POST">
         {{form.csrf_token}}
@@ -15,4 +22,6 @@
         {{form.submit}}
     </form>
 </body>
+
+<footer></footer>
 </html>

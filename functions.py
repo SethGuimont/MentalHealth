@@ -1,3 +1,11 @@
+'''
+Putting all useful links here:
+https://stackoverflow.com/questions/62799852/read-pdf-object-from-s3
+https://stackoverflow.com/questions/56716852/what-is-a-cost-effective-solution-to-store-pdf-files-on-cloud-when-i-am-using-aw
+https://flask-s3.readthedocs.io/en/latest/
+'''
+
+
 import json
 import os
 import boto3
