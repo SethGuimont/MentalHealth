@@ -6,22 +6,12 @@
     <title>FormFinder Wisconsin</title>
 </head>
 <body>
-<header>
-      <nav>
-        <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Community</li>
-        </ul>
-    </nav>
-</header>
+{% include "header.html" %}
     <form action="/search" method="POST">
         {{form.csrf_token}}
         {{form.ids}}
         {{form.submit}}
     </form>
+{% include "footer.html" %}
 </body>
-
-<footer></footer>
 </html>

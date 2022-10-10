@@ -6,22 +6,12 @@
     <title>FormFinder Home</title>
 </head>
 <body>
-<header>
-    <nav>
-        <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Community</li>
-        </ul>
-    </nav>
-</header>
+{% include "header.html" %}
 <ul>
     <li><a href="{{ url_for('minnesota') }}">Minnesota Forms</a></li>
     <li><a href="{{ url_for('minnesota') }}">Wisconsin Forms</a></li>
 </ul>
-
-<footer></footer>
+{% include "footer.html" %}
 </body>
 </html>
 
