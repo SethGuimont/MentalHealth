@@ -1,12 +1,12 @@
 import boto3
 from flask import Flask, render_template, request, url_for, flash, redirect
-#from flask_bootstrap import Bootstrap
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired
 
-s3 = boto3.client('')
+# s3 = boto3.client('')
 
 app = Flask(__name__)
+app.config['DEBUG'] = True
 
 
 class BasicForm(Form):
@@ -37,6 +37,16 @@ def minnesota():
 def wisconsin():
     wis_form = BasicForm()
     return render_template('wisconsin.html', wis_form=wis_form)
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+
+@app.route('/services')
+def services():
+    return render_template('services.html')
 
 
 if __name__ == '__main__':

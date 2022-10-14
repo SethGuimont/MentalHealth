@@ -2,10 +2,11 @@
     <h1>TEST</h1>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Services</li>
-            <li>Community</li>
+
+            <li><a href="{{ url_for('main') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('services') }}">Services</a></li>
+            <li><a href="{{ url_for('main') }}">Community</a></li>
         </ul>
     </nav>
 </header>
