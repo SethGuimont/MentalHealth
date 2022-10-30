@@ -1,15 +1,9 @@
 from selenium import webdriver
-from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 
+driver = webdriver.Firefox()
 
-driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
-driver.get("http://www.python.org")
-assert "Python" in driver.title
-elem = driver.find_element(By.NAME, "q")
-elem.clear()
-elem.send_keys("pycon")
-elem.send_keys(Keys.RETURN)
-assert "No results found." not in driver.page_source
+driver.get("127.0.0.1:5000")
+#assert "Python" in driver.title
 driver.close()
