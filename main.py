@@ -1,6 +1,5 @@
 import os
 import boto3
-#import boto3
 from flask import Flask, render_template, request, url_for, flash, redirect, flash, \
     Response, session
 from wtforms import Form, StringField, SubmitField

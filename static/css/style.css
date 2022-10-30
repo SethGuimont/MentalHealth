@@ -13,11 +13,25 @@ nav * {
 }
 
 header{
-    text-align:center;
-    background-color: lightblue;
+background-color: #CCFFFF;
+}
+
+header h1{
+text-align: left;
+color: #DB7093;
+}
+
+header nav{
+    text-align:right;
+    margin-right: 30px;
+    padding: 25px 0;
 }
 
 footer{
-    background-color: lightblue;
+    background-color: #181d38;
     padding-bottom:20px;
+}
+
+footer p{
+color: #FFFFFF;
 }
