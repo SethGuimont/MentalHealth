@@ -1,13 +1,10 @@
 from resources import list_files, download_file
-from flask import Flask, render_template, request, url_for, flash, redirect, flash, \
-    Response, session, send_file
+from flask import Flask, render_template, request, send_file
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired
 
-
 app = Flask(__name__)
 app.config['DEBUG'] = True
-
 
 BUCKET_NAME = 'mental-health-sxk-1'
 
@@ -57,9 +54,10 @@ def files():
     contents = list_files(BUCKET_NAME)
     return render_template('files.html', contents=contents)
 
+
 @app.route("/download/<filename>", methods=['GET'])
 def download(filename):
-    BUCKET=BUCKET_NAME
+    BUCKET = BUCKET_NAME
     if request.method == 'GET':
         output = download_file(filename, BUCKET)
 
