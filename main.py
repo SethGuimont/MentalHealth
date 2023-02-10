@@ -2,6 +2,7 @@ from resources import list_files, download_file
 from flask import Flask, render_template, request, send_file
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired
+from crawler import *
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -62,6 +63,20 @@ def download(filename):
         output = download_file(filename, BUCKET)
 
         return send_file(output, as_attachment=True)
+
+
+@app.route("/crawler_pdf")
+def run_docxcrawl():
+    return render_template('pdf_crawler.html', methods=['GET'])
+    if request.method == 'GET':
+        download_pdf()
+
+
+@app.rout("/crawler_docx")
+def run_docxcrawl():
+    return render_template('docx_crawler.html', methods=['GET'])
+    if request.method == 'GET':
+        download_docx()
 
 
 if __name__ == '__main__':
