@@ -66,13 +66,13 @@ def download(filename):
 
 
 @app.route("/crawler_pdf")
-def run_docxcrawl():
+def run_pdfcrawl():
     return render_template('pdf_crawler.html', methods=['GET'])
     if request.method == 'GET':
         download_pdf()
 
 
-@app.rout("/crawler_docx")
+@app.route("/crawler_docx")
 def run_docxcrawl():
     return render_template('docx_crawler.html', methods=['GET'])
     if request.method == 'GET':
