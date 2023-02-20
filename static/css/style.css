@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 
- html{
-    font-family: 'Libre Caslon Text', serif;
- }
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+
+}
 
  ul {
   list-style-type: none; /* Remove bullets */
@@ -10,15 +17,20 @@
 
 nav * {
   display: inline;
+  color: #FFFFFF;
+}
+
+li{
+
 }
 
 header{
-background-color: #CCFFFF;
+background-color: #181d38;
 }
 
 header h1{
-text-align: left;
-color: #DB7093;
+    text-align: left;
+    color: #FFFFFF;
 }
 
 header nav{

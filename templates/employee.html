@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
-{% block title %}Files{% endblock %}
+{% block title %}Employees{% endblock %}
 {% block content %}
+   <div>
+     <h2>Select Tools</h2>
+            </div>
+                <ul>
+                    <li><a href="{{ url_for('run_pdfcrawl') }}">Run PDF Crawl</a></li>
+                    <li><a href="{{ url_for('run_docxcrawl') }}">Run Docs Crawl</a></li>
 
-<h2>Lets crawl for PDF </h2>
-<button class = "crawl_run">Big Button</button>
+                </ul>
 
             <div>
                 <h2>Subsection 2</h2>
@@ -36,4 +41,5 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
+
 {% endblock %}

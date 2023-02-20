@@ -67,16 +67,15 @@ def download(filename):
 
 @app.route("/crawler_pdf")
 def run_pdfcrawl():
-    return render_template('pdf_crawler.html', methods=['GET'])
-    if request.method == 'GET':
-        download_pdf()
-
+    return render_template('pdf_crawler.html')
 
 @app.route("/crawler_docx")
 def run_docxcrawl():
-    return render_template('docx_crawler.html', methods=['GET'])
-    if request.method == 'GET':
-        download_docx()
+    return render_template('docx_crawler.html')
+
+@app.route("/employee_portal")
+def employee_portal():
+    return render_template("employee.html")
 
 
 if __name__ == '__main__':
