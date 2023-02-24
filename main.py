@@ -1,8 +1,13 @@
 from resources import list_files, download_file
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, redirect, url_for
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired
 from crawler import *
+from flask_login import LoginManager
+from flask import Blueprint
+#from . import db
+
+#https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
@@ -69,13 +74,23 @@ def download(filename):
 def run_pdfcrawl():
     return render_template('pdf_crawler.html')
 
+
 @app.route("/crawler_docx")
 def run_docxcrawl():
     return render_template('docx_crawler.html')
 
+
 @app.route("/employee_portal")
 def employee_portal():
     return render_template("employee.html")
+
+
+@app.route("/employee_login", methods=['GET', 'POST'])
+def employee_login():
+    if request.method == 'POST':
+        if request.form['username'] == 'admin' or request.form == 'admin':
+            return redirect(url_for('employee_portal'))
+    return render_template('login.html')
 
 
 if __name__ == '__main__':
