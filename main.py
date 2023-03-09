@@ -2,9 +2,8 @@ from resources import list_files, download_file
 from flask import Flask, render_template, request, send_file, redirect, url_for
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired
-from crawler import *
-from flask_login import LoginManager
-from flask import Blueprint
+from scraper.crawler import *
+
 #from . import db
 
 #https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login

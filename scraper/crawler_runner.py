@@ -1,4 +1,4 @@
-from crawler import *
+from scraper.crawler import *
 choice = input("Press 1 for pdf or 2 for docx or 3 to upload a file: ")
 if choice == '1':
     download_pdf()
