@@ -3,13 +3,20 @@ from flask import Flask, render_template, request, send_file, redirect, url_for
 from wtforms import Form, StringField, SubmitField
 from wtforms.validators import DataRequired
 from scraper.crawler import *
+from models import *
 
-#from . import db
+
 
 #https://www.digitalocean.com/community/tutorials/how-to-add-authentication-to-your-app-with-flask-login
 
 app = Flask(__name__)
 app.config['DEBUG'] = True
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///project.db"
+# initialize the app with the extension
+db.init_app(app)
+# Create db tables
+with app.app_context():
+    db.create_all()
 
 BUCKET_NAME = 'mental-health-sxk-1'
 

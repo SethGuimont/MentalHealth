@@ -25,7 +25,7 @@ def test_landing(client):
     assert landing.status_code == 200
 
 
-def test_filedisplay(client):
+def test_file_display(client):
     aws_files = client.get('/files')
     html = aws_files.data.decode()
 
